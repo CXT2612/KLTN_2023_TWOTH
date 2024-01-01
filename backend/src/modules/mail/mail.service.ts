@@ -38,7 +38,7 @@ export class MailService {
 			const result = await this.transporter.sendMail({
 				from: `[Cửa hàng Thiết bị điện tử] noreply@gmail.com`,
 				to: data.email,
-				bcc: ['letxhe140798@fpt.edu.vn'],
+				bcc: ['caoxuanthang1221@gmail.com'],
 				subject: `[Cửa hàng Thiết bị điện tử] Chào mừng bạn đến với trang web`,
 				html: `
 			  <div style="background-color: #003375; margin: 0 auto; max-width: 600px; ">
@@ -48,8 +48,8 @@ export class MailService {
 				  
 
 				  <p>Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu bổ sung nào, 
-				  xin hãy liên hệ với chúng tôi qua số Hotline <b>0987654321</b> 
-				  hoặc gửi email về địa chỉ noithat@gmail.com. Chúng tôi luôn sẵn lòng giúp đỡ bạn.</p>
+				  xin hãy liên hệ với chúng tôi qua số Hotline <b>0333227624</b> 
+				  hoặc gửi email về địa chỉ caoxuanthang1221@gmail.com. Chúng tôi luôn sẵn lòng giúp đỡ bạn.</p>
 				  
 				  <p>Trân trọng,</p>
 				  <p><b>Cửa hàng Thiết bị điện tử</b></p>
@@ -67,7 +67,7 @@ export class MailService {
 			const result = await this.transporter.sendMail({
 				from: `[Cửa hàng Thiết bị điện tử] noreply@gmail.com`,
 				to: data.email || data.receiver_email,
-				cc: ['letxhe140798@fpt.edu.vn'],
+				cc: ['caoxuanthang1221@gmail.com'],
 				subject: `[Cửa hàng Thiết bị điện tử] Đặt hàng thành công ${data?.code ? '#'+ data?.code : ''}`,
 				html: `
                 <div style='margin-left: 20px; font-size: 14px; overflow: auto; height: 400px; display: block;'>
@@ -119,7 +119,7 @@ export class MailService {
 			const result = await this.transporter.sendMail({
 				from: `[Cửa hàng Thiết bị điện tử] noreply@gmail.com`,
 				to: [this.config.get('MAIL_TO')],
-				bcc: ['letxhe140798@fpt.edu.vn'],
+				bcc: ['caoxuanthang1221@gmail.com'],
 				subject: `[Cửa hàng Thiết bị điện tử - liên hệ] ${data.title} `,
 				html: `
 			  <div style="background-color: #003375; margin: 0 auto;">
@@ -143,7 +143,7 @@ export class MailService {
 			const result = await this.transporter.sendMail({
 				from: `[Cửa hàng Thiết bị điện tử] noreply@gmail.com`,
 				to: [data.email],
-				bcc: ['letxhe140798@fpt.edu.vn'],
+				bcc: ['caoxuanthang1221@gmail.com'],
 				subject: `[Cửa hàng Thiết bị điện tử] Thay đổi mật khẩu `,
 				html: `
 				<div style="background-color: #003375; margin: 0 auto; max-width: 600px; ">
@@ -154,7 +154,7 @@ export class MailService {
 					<span style="color: black">Mật khẩu: <b>${data.password}</b></span><br>
 					<p>Vui lòng thay đổi lại mật khẩu qua đường link: <a href="${data.link}">${data.link}</a></p>
 
-					<p>Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu bổ sung nào, xin hãy liên hệ với chúng tôi qua số Hotline <b>0865.405.630</b> hoặc gửi email về địa chỉ admin@gmail.com. Chúng tôi luôn sẵn lòng giúp đỡ bạn.</p>
+					<p>Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu bổ sung nào, xin hãy liên hệ với chúng tôi qua số Hotline <b>0333227624</b> hoặc gửi email về địa chỉ caoxuanthang1221@gmail.com. Chúng tôi luôn sẵn lòng giúp đỡ bạn.</p>
 					
 					<p>Trân trọng,</p>
 					<p><b>Cửa hàng Thiết bị điện tử</b></p>
