@@ -40,3 +40,4 @@ files/
 !.vscode/extensions.json
 
 /.env
+/yarn.lock
