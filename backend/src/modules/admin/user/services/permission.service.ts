@@ -61,13 +61,13 @@ export class PermissionService {
                 name : 'Chi tiết Đơn hàng',
                 description: 'Chi tiết đơn hàng',
 				group: 'ORDER',
-                guard_name: '/order/show'
+                guard_name: '/order/view'
             },
             {
                 name : 'Cập nhật Đơn hàng',
                 description: 'Cập nhật đơn hàng',
 				group: 'ORDER',
-                guard_name: '/order/update'
+                guard_name: '/order/edit'
             },
             {
                 name : 'Danh sách Sản phẩm',
@@ -79,7 +79,7 @@ export class PermissionService {
                 name : 'Chi tiết Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Chi tiết sản phẩm',
-                guard_name: '/product/show'
+                guard_name: '/product/view'
             },
             {
                 name : 'Add Sản phẩm',
@@ -91,7 +91,7 @@ export class PermissionService {
                 name : 'Cập nhật Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Cập nhật sản phẩm',
-                guard_name: '/product/update'
+                guard_name: '/product/edit'
             },
             {
                 name : 'Danh sách Phân loại sản phẩm',
@@ -103,7 +103,7 @@ export class PermissionService {
                 name : 'Chi tiết Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Chi tiết phân loại',
-                guard_name: '/category/show'
+                guard_name: '/category/view'
             },
             {
                 name : 'Add Phân loại sản phẩm',
@@ -115,7 +115,7 @@ export class PermissionService {
                 name : 'Cập nhật Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Cập nhật phân loại',
-                guard_name: '/category/update'
+                guard_name: '/category/edit'
             },
             {
                 name : 'Danh sách Slide',
@@ -127,7 +127,7 @@ export class PermissionService {
                 name : 'Chi tiết Slide',
 				group: 'SLIDE',
                 description: 'Chi tiết slide',
-                guard_name: '/slide/show'
+                guard_name: '/slide/view'
             },
             {
                 name : 'Add Slide',
@@ -139,10 +139,8 @@ export class PermissionService {
                 name : 'Cập nhật Slide',
 				group: 'SLIDE',
                 description: 'Cập nhật slide',
-                guard_name: '/slide/update'
+                guard_name: '/slide/edit'
             },
-
-
 			{
                 name : 'Danh sách Giảm giá',
 				group: 'DISCOUNT',
@@ -153,7 +151,7 @@ export class PermissionService {
                 name : 'Chi tiết Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Chi tiết Giảm giá',
-                guard_name: '/discount/show'
+                guard_name: '/discount/view'
             },
             {
                 name : 'Add Giảm giá',
@@ -165,10 +163,8 @@ export class PermissionService {
                 name : 'Cập nhật Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Cập nhật Giảm giá',
-                guard_name: '/discount/update'
+                guard_name: '/discount/edit'
             },
-
-			
             {
                 name : 'Danh sách Role',
 				group: 'ROLE',
@@ -179,7 +175,7 @@ export class PermissionService {
                 name : 'Chi tiết Role',
 				group: 'ROLE',
                 description: 'Chi tiết Role',
-                guard_name: '/role/show'
+                guard_name: '/role/view'
             },
             {
                 name : 'Add Role',
@@ -191,7 +187,7 @@ export class PermissionService {
                 name : 'Cập nhật Role',
 				group: 'ROLE',
                 description: 'Cập nhật Role',
-                guard_name: '/role/update'
+                guard_name: '/role/edit'
             },
             {
                 name : 'Danh sách permission',
@@ -199,34 +195,12 @@ export class PermissionService {
                 description: 'Danh sách permission',
                 guard_name: '/permission/'
             },
-            // {
-            //     name : 'Chi tiết permission',
-            //     description: 'how permission',
-            //     guard_name: '/permission'
-            // },
-            // {
-            //     name : 'Add permission',
-            //     description: 'Thêm mới permission',
-            //     guard_name: '/permission/store'
-            // },
-            // {
-            //     name : 'Cập nhật permission',
-            //     description: 'Cập nhật permission',
-            //     guard_name: '/permission/update'
-            // },
-            // {
-            //     name : 'Danh sách Contact',
-			// 	   group: 'CONTACT',
-            //     description: 'Danh sách contact',
-            //     guard_name: '/contact/'
-            // },
-            // {
-            //     name : 'Chi tiết Contact',
-			// 	   group: 'CONTACT',
-            //     description: 'Chi tiết contact',
-            //     guard_name: '/contact/show'
-            // },
-            
+            {
+                name : 'Thông tin liên hệ',
+				group: 'CONTACT',
+                description: 'Thông tin liên hệ',
+                guard_name: '/contact'
+            },
             {
                 name : 'Danh sách user',
 				group: 'USER',
@@ -237,7 +211,7 @@ export class PermissionService {
                 name : 'Chi tiết user',
 				group: 'USER',
                 description: 'Chi tiết user',
-                guard_name: '/user/show'
+                guard_name: '/user/view'
             },
             {
                 name : 'Add user',
@@ -249,7 +223,7 @@ export class PermissionService {
                 name : 'Cập nhật user',
                 description: 'Cập nhật user',
 				group: 'USER',
-                guard_name: '/user/update'
+                guard_name: '/user/edit'
             },
 			{
                 name : 'Danh sách reviews',
@@ -267,7 +241,7 @@ export class PermissionService {
                 name : 'Cập nhật reviews',
 				group: 'VOTE',
                 description: 'Cập nhật reviews',
-                guard_name: '/vote/update'
+                guard_name: '/vote/edit'
             },
 			{
                 name : 'Xóa reviews',
@@ -275,8 +249,6 @@ export class PermissionService {
                 description: 'Xóa reviews',
                 guard_name: '/vote/delete'
             },
-
-
 			{
                 name : 'Danh sách Blog',
 				group: 'BLOG',
@@ -287,7 +259,7 @@ export class PermissionService {
                 name : 'Chi tiết blog',
 				group: 'BLOG',
                 description: 'Chi tiết blog',
-                guard_name: '/blog/show'
+                guard_name: '/blog/view'
             },
 			{
                 name : 'Tạo blog',
@@ -299,7 +271,7 @@ export class PermissionService {
                 name : 'Cập nhật blog',
 				group: 'BLOG',
                 description: 'Cập nhật blog',
-                guard_name: '/blog/update'
+                guard_name: '/blog/edit'
             },
 			{
                 name : 'Xóa blog',
@@ -317,7 +289,7 @@ export class PermissionService {
                 name : 'Chi tiết phân loại blog',
 				group: 'MENU',
                 description: 'Chi tiết phân loại blog',
-                guard_name: '/menu/show'
+                guard_name: '/menu/view'
             },
 			{
                 name : 'Tạo phân loại blog',
@@ -329,7 +301,7 @@ export class PermissionService {
                 name : 'Cập nhật phân loại blog',
 				group: 'MENU',
                 description: 'Cập nhật phân loại blog',
-                guard_name: '/menu/update'
+                guard_name: '/menu/edit'
             },
 			{
                 name : 'Xóa phân loại blog',
