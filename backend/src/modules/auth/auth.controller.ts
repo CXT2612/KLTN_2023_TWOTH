@@ -11,7 +11,7 @@ import { JwtGuard } from './guards/jwt/jwt.guard';
 import { RegisterAdminDto } from './dtos/register-admin.dto';
 import { RegisterDto } from './dtos/register.dto';
 
-@Controller('auth')
+@Controller('/auth')
 export class AuthController {
 	constructor(private readonly authService: AuthService) { }
 
