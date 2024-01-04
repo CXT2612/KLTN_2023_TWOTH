@@ -124,7 +124,7 @@ export const ROUTERS = [
 	},
 	
 	{
-		path: '/order/view/:id',
+		path: '/order/show/:id',
 		exact: true,
 		redirectFrom: '/order', 
 		title: 'Chi tiết',
@@ -171,7 +171,6 @@ export const ROUTERS = [
 	{
 		path: '/profile',
 		exact: true,
-		// redirectFrom: '/role', 
 		title: 'Profile',
 		component: ProfileContainer,
 	},
@@ -179,7 +178,6 @@ export const ROUTERS = [
 	{
 		path: '/reviews',
 		exact: true,
-		// redirectFrom: '/role', 
 		title: 'Reviews',
 		component: PageVoting,
 	},
@@ -187,7 +185,6 @@ export const ROUTERS = [
 	{
 		path: '/contact',
 		exact: true,
-		// redirectFrom: '/role', 
 		title: 'Contacts',
 		component: ContactPage,
 	},
@@ -243,12 +240,11 @@ export const ROUTERS = [
 		component: MenuForm,
 	},
 
-
 	{
 		path: '/blog/list',
 		exact: true,
 		redirectFrom: '/blog', 
-		title: 'Menus',
+		title: 'Blogs',
 		component: BlogContainer,
 	},
 	{

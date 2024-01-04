@@ -6,6 +6,7 @@ import { CreateMenuDto } from './dto/createMenu.dto';
 import { UpdateMenuDto } from './dto/updateMenu.dto';
 import * as _ from 'lodash';
 import { JwtGuard } from 'src/modules/auth/guards/jwt/jwt.guard';
+import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
 
 @Controller('admin/menu')
 @ApiTags('Admin Menu')
@@ -18,6 +19,7 @@ export class MenuController {
 
     @Get('')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getMenus(@Request() req: any) {
         try {
@@ -38,6 +40,7 @@ export class MenuController {
 
     @Get('show/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getMenuById(@Param('id') id: number) {
         try {
@@ -51,6 +54,7 @@ export class MenuController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createMenu(@Body() createMenu: CreateMenuDto) {
         try {
@@ -73,6 +77,7 @@ export class MenuController {
 
     @Put('update/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async updateMenu(@Param('id') id: number, @Body() updateMenu: UpdateMenuDto) {
         try {
@@ -91,6 +96,7 @@ export class MenuController {
 
     @Delete('delete/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async deleteMenu(@Param('id') id: number) {
         try {

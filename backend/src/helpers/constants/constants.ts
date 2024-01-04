@@ -16,7 +16,7 @@ export const USER_CONST: any = {
 
 export const GROUP_TYPE: any = [
 	{
-		'value': 'SUPER_ADMIN',
+		'value': 'SUPER-ADMINISTRATOR',
 		'label': 'Full quyền'
 	},
 	{
@@ -70,8 +70,10 @@ export const PERMISSION_ROUTE = [
 	{ route: 'user/edit/:id', permission: 'USER_UPDATE' },
 	{ route: 'user/create', permission: 'USER_CREATE' },
 	{ route: 'user/list', permission: 'USER_INDEX' },
+
 	// permissions
 	{ route: 'permission/list', permission: 'PERMISSION_INDEX' },
+	
 	// roles
 	{ route: 'role', permission: 'ROLE_INDEX' },
 	{ route: 'role/:id', permission: 'ROLE_SHOW' },

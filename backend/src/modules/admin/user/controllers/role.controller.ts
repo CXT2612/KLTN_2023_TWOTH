@@ -5,6 +5,7 @@ import { RoleService } from "../services/role.service";
 import { BaseResponse } from "src/helpers/helper";
 import { RoleDto } from "../dtos/role.dto";
 import { JwtGuard } from "src/modules/auth/guards/jwt/jwt.guard";
+import { RoleGuard } from "src/modules/auth/guards/role/role.guard";
 
 @Controller('admin/role')
 @ApiTags('Admin Roles')
@@ -15,6 +16,7 @@ export class RoleController {
     ) {
     }
     @Get('')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async getListsRoles(
         @Req() request: Request
@@ -37,6 +39,7 @@ export class RoleController {
     }
 
     @Post('store')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async create(
         @Body() roleData: RoleDto
@@ -52,6 +55,7 @@ export class RoleController {
     }
 
     @Get('show/:id')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async show(
         @Param('id') id: number
@@ -68,6 +72,7 @@ export class RoleController {
     }
 
     @Put('update/:id')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async update(
         @Param('id') id: number,
@@ -84,6 +89,7 @@ export class RoleController {
     }
 
 	@Delete('/delete/:id')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async delete(
         @Param('id') id: number,

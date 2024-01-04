@@ -16,6 +16,7 @@ export class StatisticController {
 
 	@Get('')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async getStatistic(
 		@Request() req: any

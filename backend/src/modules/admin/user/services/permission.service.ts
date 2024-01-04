@@ -43,25 +43,25 @@ export class PermissionService {
                 name : 'Full Quyền',
                 description: 'Full Quyền',
                 group: 'ADMIN',
-                guard_name: 'SUPER_ADMIN'
+                guard_name: 'SUPER-ADMINISTRATOR'
             },
 			{
                 name : 'Dashboard',
                 description: 'Dashboard',
                 group: 'Dashboard',
-                guard_name: '/statistical/'
+                guard_name: '/statistical'
             },
             {
                 name : 'Danh sách Đơn hàng',
                 description: 'Danh sách Đơn hàng',
                 group: 'ORDER',
-                guard_name: '/order/'
+                guard_name: '/order'
             },
             {
                 name : 'Chi tiết Đơn hàng',
                 description: 'Chi tiết đơn hàng',
 				group: 'ORDER',
-                guard_name: '/order/view'
+                guard_name: '/order/show'
             },
             {
                 name : 'Cập nhật Đơn hàng',
@@ -73,13 +73,13 @@ export class PermissionService {
                 name : 'Danh sách Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Danh sách sản phẩm',
-                guard_name: '/product/'
+                guard_name: '/product'
             },
             {
                 name : 'Chi tiết Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Chi tiết sản phẩm',
-                guard_name: '/product/view'
+                guard_name: '/product/show'
             },
             {
                 name : 'Add Sản phẩm',
@@ -97,13 +97,13 @@ export class PermissionService {
                 name : 'Danh sách Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Danh sách phân loại',
-                guard_name: '/category/'
+                guard_name: '/category'
             },
             {
                 name : 'Chi tiết Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Chi tiết phân loại',
-                guard_name: '/category/view'
+                guard_name: '/category/show'
             },
             {
                 name : 'Add Phân loại sản phẩm',
@@ -121,13 +121,13 @@ export class PermissionService {
                 name : 'Danh sách Slide',
 				group: 'SLIDE',
                 description: 'Danh sách slide',
-                guard_name: '/slide/'
+                guard_name: '/slide'
             },
             {
                 name : 'Chi tiết Slide',
 				group: 'SLIDE',
                 description: 'Chi tiết slide',
-                guard_name: '/slide/view'
+                guard_name: '/slide/show'
             },
             {
                 name : 'Add Slide',
@@ -151,7 +151,7 @@ export class PermissionService {
                 name : 'Chi tiết Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Chi tiết Giảm giá',
-                guard_name: '/discount/view'
+                guard_name: '/discount/show'
             },
             {
                 name : 'Add Giảm giá',
@@ -169,13 +169,13 @@ export class PermissionService {
                 name : 'Danh sách Role',
 				group: 'ROLE',
                 description: 'Danh sách Role',
-                guard_name: '/role/'
+                guard_name: '/role'
             },
             {
                 name : 'Chi tiết Role',
 				group: 'ROLE',
                 description: 'Chi tiết Role',
-                guard_name: '/role/view'
+                guard_name: '/role/show'
             },
             {
                 name : 'Add Role',
@@ -205,13 +205,13 @@ export class PermissionService {
                 name : 'Danh sách user',
 				group: 'USER',
                 description: 'Danh sách user',
-                guard_name: '/user/'
+                guard_name: '/user'
             },
             {
                 name : 'Chi tiết user',
 				group: 'USER',
                 description: 'Chi tiết user',
-                guard_name: '/user/view'
+                guard_name: '/user/show'
             },
             {
                 name : 'Add user',
@@ -259,7 +259,7 @@ export class PermissionService {
                 name : 'Chi tiết blog',
 				group: 'BLOG',
                 description: 'Chi tiết blog',
-                guard_name: '/blog/view'
+                guard_name: '/blog/show'
             },
 			{
                 name : 'Tạo blog',
@@ -289,7 +289,7 @@ export class PermissionService {
                 name : 'Chi tiết phân loại blog',
 				group: 'MENU',
                 description: 'Chi tiết phân loại blog',
-                guard_name: '/menu/view'
+                guard_name: '/menu/show'
             },
 			{
                 name : 'Tạo phân loại blog',

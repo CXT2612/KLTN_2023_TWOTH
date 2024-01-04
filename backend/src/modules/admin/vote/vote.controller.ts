@@ -1,10 +1,11 @@
-import { BadRequestException, Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Put, Request, Post } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Put, Request, Post, UseGuards } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { VoteService } from './vote.service';
 import { HTTP_STATUS, IPaging, Paging, Response, BaseResponse } from 'src/helpers/helper';
 import CreateVoteDto from './dto/createVote.dto';
 import UpdateVoteDto from './dto/updateVote.dto';
 import * as _ from 'lodash';
+import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
 
 @Controller('admin/vote')
 @ApiTags('Admin Votes')
@@ -16,6 +17,7 @@ export class VoteController {
 
     @Get('')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getVotes(@Request() req: any) {
         try {
@@ -36,6 +38,7 @@ export class VoteController {
 
     @Get('show/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getVoteById(@Param('id') id: number) {
         try {
@@ -51,6 +54,7 @@ export class VoteController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createVote(@Request() req: any, @Body() data: CreateVoteDto) {
         try {
@@ -70,6 +74,7 @@ export class VoteController {
 
     @Put('update/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async updateVote(@Request() req: any, @Param('id') id: number, @Body() data: UpdateVoteDto) {
         try {
@@ -91,6 +96,7 @@ export class VoteController {
 
     @Delete('delete/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async deleteVote(@Param('id') id: number) {
         try {

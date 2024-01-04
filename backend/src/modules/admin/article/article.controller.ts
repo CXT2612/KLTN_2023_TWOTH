@@ -6,6 +6,7 @@ import { ArticleService } from './article.service';
 import { CreateArticleDto } from './dto/createArticle.dto';
 import { UpdateArticleDto } from './dto/updateArticle.dto';
 import { JwtGuard } from 'src/modules/auth/guards/jwt/jwt.guard';
+import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
 
 
 @Controller('admin/article')
@@ -18,6 +19,7 @@ export class ArticleController {
 
     @Get('')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getArticles(@Request() req: any) {
         try {
@@ -38,6 +40,7 @@ export class ArticleController {
 
     @Get('show/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getArticleById(@Param('id') id: number) {
         try {
@@ -51,6 +54,7 @@ export class ArticleController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createArticle(@Body() createArticle: CreateArticleDto) {
         try {
@@ -73,6 +77,7 @@ export class ArticleController {
 
     @Put('update/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async updateArticle(@Param('id') id: number, @Body() updateArticle: UpdateArticleDto) {
         try {
@@ -91,6 +96,7 @@ export class ArticleController {
 
     @Delete('delete/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async deleteArticle(@Param('id') id: number) {
         try {

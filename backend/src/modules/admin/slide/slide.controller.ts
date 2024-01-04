@@ -19,6 +19,7 @@ export class SlideController {
 
     @Get('')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getSlides(@Request() req: any) {
         try {
@@ -55,6 +56,7 @@ export class SlideController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createSlide(@Body() createSlide: CreateSlidesDto) {
         try {
@@ -77,6 +79,7 @@ export class SlideController {
 
     @Put('update/:id')
     @HttpCode(HttpStatus.OK)
+    @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async updateSlide(@Param('id') id: number, @Body() updateSlide: UpdateSlidesDto) {
         console.log('------------ update slide');
@@ -97,6 +100,7 @@ export class SlideController {
     }
 
     @Delete('delete/:id')
+    @UseGuards(RoleGuard)
     async deleteSlide(@Param('id') id: number) {
         try {
             let slide = await this.slideService.getSlideById(id);

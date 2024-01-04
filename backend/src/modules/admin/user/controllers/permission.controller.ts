@@ -40,6 +40,7 @@ export class PermissionController {
 	}
 
 	@Post('store')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async create(
 		@Body() permissionData: PermissionDto
@@ -54,6 +55,7 @@ export class PermissionController {
 	}
 
 	@Post('seed')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async seed(
 	) {
@@ -67,6 +69,7 @@ export class PermissionController {
 	}
 
 	@Get('show/:id')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async show(
 		@Param('id') id: number
@@ -81,6 +84,7 @@ export class PermissionController {
 	}
 
 	@Put('update/:id')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async update(
 		@Param('id') id: number,
@@ -96,6 +100,7 @@ export class PermissionController {
 	}
 
 	@Put(':id')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async delete(
 		@Param('id') id: number,
@@ -111,6 +116,7 @@ export class PermissionController {
 	}
 
 	@Get('config-type')
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async groupType() {
 		try {

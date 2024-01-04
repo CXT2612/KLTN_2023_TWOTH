@@ -6,6 +6,7 @@ import { DiscountService } from './discount.service';
 import { CreateDiscountDto } from './dto/create-discount.dto';
 import { UpdateDiscountDto } from './dto/update-discount.dto';
 import { JwtGuard } from 'src/modules/auth/guards/jwt/jwt.guard';
+import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
 
 @Controller('admin/discount')
 @ApiTags('Admin Discount')
@@ -15,6 +16,7 @@ export class DiscountController {
 
 	@Get('')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async getresponse(@Request() req: any) {
 		try {
@@ -50,6 +52,7 @@ export class DiscountController {
 
 	@Get('show/:id')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async findById(@Param('id') id: number) {
 		try {
@@ -65,6 +68,7 @@ export class DiscountController {
 
 	@Post('store')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async create(@Request() req: any, @Body() data: CreateDiscountDto) {
 		try {
@@ -83,6 +87,7 @@ export class DiscountController {
 
 	@Put('update/:id')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async update(@Request() req: any, @Param('id') id: number, @Body() data: UpdateDiscountDto) {
 		try {
@@ -102,6 +107,7 @@ export class DiscountController {
 
 	@Delete('delete/:id')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async delete(@Param('id') id: number) {
 		try {

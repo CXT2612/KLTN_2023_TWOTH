@@ -103,6 +103,7 @@ export class UserController {
     }
 
     @Put('active/:id')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async active(
         @Param('id') id: number,
@@ -120,6 +121,7 @@ export class UserController {
     }
 
     @Put('multi-actives')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async actives(
         @Body() formData: any,
@@ -137,6 +139,7 @@ export class UserController {
     }
 
     @Put('lock/:id')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async accountLock(
         @Param('id') id: number,
@@ -154,6 +157,7 @@ export class UserController {
     }
 
     @Put('multi-locks')
+    @UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async accountsLock(
         @Req() request: any,

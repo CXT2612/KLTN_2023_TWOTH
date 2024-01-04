@@ -18,6 +18,7 @@ export class BlogController {
 
 	@Get('')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async findAll(@Request() req: any) {
 		try {
@@ -38,6 +39,7 @@ export class BlogController {
 
 	@Get('show/:id')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async getCategoryById(@Param('id') id: number) {
 		try {
@@ -53,6 +55,7 @@ export class BlogController {
 
 	@Post('store')
 	@HttpCode(HttpStatus.OK)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async createCategory(@Body() createCate: CreateBlogDto) {
 		try {
