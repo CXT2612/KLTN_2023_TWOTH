@@ -7,6 +7,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { BaseResponse, HTTP_STATUS, IPaging, Paging } from 'src/helpers/helper';
 import * as _ from 'lodash';
 import { BadRequestException } from 'src/helpers/response/badRequest';
+import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
 
 @Controller('admin/blog')
 @ApiTags('Admin Blog')
@@ -74,7 +75,7 @@ export class BlogController {
 
 	@Put('update/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async updateCategory(@Param('id') cateId: number, @Body() updateCate: UpdateBlogDto) {
 		try {
@@ -93,7 +94,7 @@ export class BlogController {
 
 	@Delete('delete/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async deleteCategory(@Param('id') id: number) {
 		try {

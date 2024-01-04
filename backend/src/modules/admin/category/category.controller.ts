@@ -20,7 +20,7 @@ export class CategoryController {
 
     @Get('')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getCategories(@Request() req: any) {
         try {
@@ -41,7 +41,7 @@ export class CategoryController {
 
     @Get('show/:id')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getCategoryById(@Param('id') id: number) {
         try {
@@ -57,7 +57,7 @@ export class CategoryController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createCategory(@Body() createCate: CreateCategoryDto) {
         try {
@@ -80,7 +80,7 @@ export class CategoryController {
 
     @Put('update/:id')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async updateCategory(@Param('id') cateId: number, @Body() updateCate: UpdateCategoryDto) {
         try {
@@ -99,7 +99,7 @@ export class CategoryController {
 
     @Delete('delete/:id')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async deleteCategory(@Param('id') cateId: number) {
         try {
@@ -129,7 +129,7 @@ export class CategoryController {
 
     @Get('list/hot')
     @HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async getCategoriesHot(@Request() req: any) {
         try {

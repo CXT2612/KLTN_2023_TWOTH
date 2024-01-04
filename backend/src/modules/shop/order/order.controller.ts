@@ -92,7 +92,7 @@ export class OrderController {
 
 
 	@Put('update/:id')
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
 	async update(@Param('id') id: string, @Body() updateOrderDto: any) {
 		try {
 			let order = await this.orderService.findOne(Number(id));

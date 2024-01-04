@@ -19,7 +19,7 @@ export class ProductController {
 
 	@Post('store')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async createProduct(
 		@Body() formProduct: CreateProductDto
@@ -38,7 +38,7 @@ export class ProductController {
 	}
 	@Put('/update/status/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async updateStatusProduct(
 		@Body() formProduct: any,
@@ -57,7 +57,7 @@ export class ProductController {
 
 	@Put('/update/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async updateProduct(
 		@Body() formProduct: CreateProductDto,
@@ -75,7 +75,7 @@ export class ProductController {
 
 	@Get('')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async getProducts(
 		@Request() req: any
@@ -103,7 +103,7 @@ export class ProductController {
 
 	@Get('/show/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async show(
 		@Param('id') id: number
@@ -118,7 +118,7 @@ export class ProductController {
 
 	@Delete('delete/:id')
 	@HttpCode(HttpStatus.OK)
-	// @UseGuards(RoleGuard)
+	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
 	async DeleteProduct(
 		@Param('id') id: number
