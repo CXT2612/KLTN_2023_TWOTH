@@ -137,7 +137,7 @@ export const SIDE_BARS = [
 	{
 		path: '/setting',
 		icon: 'eva eva-settings',
-		title: 'Setting',
+		title: 'Phân quyền',
 		children: [
 			{
 				path: '/setting/role/list',

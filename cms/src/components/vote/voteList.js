@@ -93,6 +93,7 @@ export const PageVoting = () =>
 							<th>Sản phẩm</th>
 							<th className='text-nowrap'>Điểm đánh giá</th>
 							<th>Nội dung</th>
+							<th>Thao tác</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -114,6 +115,13 @@ export const PageVoting = () =>
 										<StarIcons vote_number={ item?.number } />
 									</td>
 									<td className='text-break' style={ { maxWidth: '200px' } }>{ item.content }</td>
+									<td className='align-middle'>
+										<Button className='btn btn-danger'
+											onClick={ () => handleDelete( item.id ) }>
+											Delete
+										</Button>{ ' ' }
+									</td>
+									
 								</tr>
 							)
 						} )

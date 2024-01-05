@@ -23,21 +23,21 @@ const PaymentStatus = ( { location } ) =>
 		if ( params.type === 'error' )
 		{
 			setImg( ERROR_PAYMENT );
-			setTitle( 'Failed!' );
+			setTitle( 'thất bại!' );
 		} else if ( params.type === 'success' )
 		{
 			setImg( SUCCESS_PAYMENT );
-			setTitle( 'Successfully!' );
+			setTitle( 'thành công!' );
 		} else
 		{
 			setImg( SUCCESS_PAYMENT );
-			setContent( 'Payment successfully' );
+			setContent( 'Thanh toán thành công' );
 		}
 	}, [ params.type ] );
 	return (
 		<Fragment>
 			<MetaTags>
-				<title>Payment</title>
+				<title>Thánh toán</title>
 				<meta
 					name="description"
 					content="404 page of flone react minimalist eCommerce template."
@@ -45,7 +45,7 @@ const PaymentStatus = ( { location } ) =>
 			</MetaTags>
 			<BreadcrumbsItem to={ process.env.PUBLIC_URL + "/" }>Home</BreadcrumbsItem>
 			<BreadcrumbsItem to={ process.env.PUBLIC_URL + pathname }>
-				Payment
+				Thanh toán
 			</BreadcrumbsItem>
 			<LayoutOne headerTop="visible">
 				{/* breadcrumb */ }
@@ -68,7 +68,7 @@ const PaymentStatus = ( { location } ) =>
 									</div>
 
 								) : (
-									<h2 className="text-center">Payment { title }</h2>
+									<h2 className="text-center">Thanh toán { title }</h2>
 								) }
 							</div>
 						</div>
