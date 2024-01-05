@@ -71,7 +71,7 @@ export class OrderController {
 	}
 
 	@Put('edit/:id')
-	@UseGuards(RoleGuard)
+	//@UseGuards(RoleGuard)
 	async update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
 		try {
 			let order = await this.orderService.findOne(Number(id));

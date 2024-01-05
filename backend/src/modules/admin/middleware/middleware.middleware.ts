@@ -56,7 +56,7 @@ export class MiddlewareMiddleware implements NestMiddleware {
 								next();
 								return;
 							}
-						}
+						}``
 					}
 					console.log("2 " + pathName);
 				}				

@@ -6,9 +6,11 @@ import CreateVoteDto from './dto/createVote.dto';
 import UpdateVoteDto from './dto/updateVote.dto';
 import * as _ from 'lodash';
 import { RoleGuard } from 'src/modules/auth/guards/role/role.guard';
+import { JwtGuard } from 'src/modules/auth/guards/jwt/jwt.guard';
 
 @Controller('admin/vote')
 @ApiTags('Admin Votes')
+@UseGuards(JwtGuard)
 export class VoteController {
 
     constructor(

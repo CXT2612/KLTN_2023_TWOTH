@@ -218,7 +218,7 @@ const MyAccount = ( { location } ) =>
 																		<Upload action="/upload" className="w-100" listType="picture-card">
 																			{ files.length < 1 && <div>
 																				<PlusOutlined />
-																				<div style={ { marginTop: 8 } }>Upload</div>
+																				<div style={ { marginTop: 8 } }>Tải lên</div>
 																			</div> }
 																		</Upload>
 																	</Form.Item>

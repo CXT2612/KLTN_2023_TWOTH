@@ -235,7 +235,7 @@ export const UserForm = ( props ) =>
 										<Upload action="/upload" listType="picture-card">
 											{ files.length < 1 && <div>
 												<PlusOutlined />
-												<div style={ { marginTop: 8 } }>Upload</div>
+												<div style={ { marginTop: 8 } }>Tải lên</div>
 											</div> }
 										</Upload>
 									</Form.Item>
@@ -251,15 +251,15 @@ export const UserForm = ( props ) =>
 											options={ [
 												{
 													value: 'MALE',
-													label: 'Male'
+													label: 'Nam'
 												},
 												{
 													value: 'FEMALE',
-													label: 'Female'
+													label: 'Nữ'
 												},
 												{
 													value: 'OTHER',
-													label: 'Other'
+													label: 'Khác'
 												}
 											] }
 										/>
@@ -280,11 +280,6 @@ export const UserForm = ( props ) =>
 										<Input type='date' className='form-control' />
 									</Form.Item>
 								</div>
-								{/* <div className='col-12 col-md-3'>
-									<Form.Item name="type" label="Birthday" className='d-block'>
-										<Input className='form-control' />
-									</Form.Item>
-								</div> */}
 							</div>
 							<Form.Item name="address" label="Địa chỉ"
 								className=' d-block'>
@@ -311,7 +306,7 @@ export const UserForm = ( props ) =>
 							</button>
 
 							{ !id && <button type="button" className="btn btn-secondary text-center" style={ { marginLeft: 10, padding: '10px 10px' } } onClick={ resetForm }>
-								Reset
+								Làm mới
 							</button> }
 						</div>
 					</Form>

@@ -252,7 +252,7 @@ export const ProductForm = ( props ) =>
 								<Upload action="/upload" listType="picture-card">
 									{ files.length <= 5 && <div>
 										<PlusOutlined />
-										<div style={ { marginTop: 8 } }>Upload</div>
+										<div style={ { marginTop: 8 } }>Tải lên</div>
 									</div> }
 								</Upload>
 							</Form.Item>
@@ -285,7 +285,7 @@ export const ProductForm = ( props ) =>
 											style={ { borderLeft: "1px solid #d9d9d9", borderRight: "1px solid #d9d9d9" } }>
 											Value
 										</div>
-										<div className="table-item__action col-2">Action</div>
+										<div className="table-item__action col-2">Thao tác</div>
 									</div>
 									{
 										attributes?.length > 0 && attributes.map( ( item, key ) =>

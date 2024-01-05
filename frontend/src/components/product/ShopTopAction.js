@@ -36,7 +36,7 @@ const ShopTopAction = ( props ) =>
 					</Select>
 				</div>
 				<p>
-					Showing { props.sortedProductCount } of { props.productCount } result
+					Hiển thị { props.sortedProductCount } trên { props.productCount } kết quả
 				</p>
 			</div>
 

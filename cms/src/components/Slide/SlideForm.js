@@ -165,7 +165,7 @@ export const SlideForm = ( props ) =>
 							<Upload action="/upload" listType="picture-card">
 								{ files.length < 1 && <div>
 									<PlusOutlined />
-									<div style={ { marginTop: 8 } }>Upload</div>
+									<div style={ { marginTop: 8 } }>Tải lên</div>
 								</div> }
 							</Upload>
 						</Form.Item>
@@ -190,7 +190,7 @@ export const SlideForm = ( props ) =>
 						</button>
 
 						{ !id && <button type="button" className="btn btn-secondary text-center" style={ { marginLeft: 10, padding: '10px 10px' } } onClick={ resetForm }>
-							Reset
+							Làm mới
 						</button> }
 					</div>
 				</Form>

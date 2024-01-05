@@ -46,8 +46,8 @@ export class PermissionService {
                 guard_name: 'SUPER-ADMINISTRATOR'
             },
 			{
-                name : 'Dashboard',
-                description: 'Dashboard',
+                name : 'Thống kê',
+                description: 'Thống kê',
                 group: 'Dashboard',
                 guard_name: '/statistical/'
             },

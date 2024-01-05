@@ -34,7 +34,7 @@ export class OrderController {
 	}
 
 	@Get('')
-	@UseGuards(JwtGuard)
+	// @UseGuards(JwtGuard)
 	async findAll(@Request() req: any) {
 		
 		try {
@@ -85,14 +85,14 @@ export class OrderController {
 	}
 
 	@Get('show/:id')
-	@UseGuards(JwtGuard)
+	// @UseGuards(JwtGuard)
 	findOne(@Param('id') id: string) {
 		return this.orderService.findOne(+id);
 	}
 
 
 	@Put('edit/:id')
-	@UseGuards(RoleGuard)
+	// @UseGuards(RoleGuard)
 	async update(@Param('id') id: string, @Body() updateOrderDto: any) {
 		try {
 			let order = await this.orderService.findOne(Number(id));

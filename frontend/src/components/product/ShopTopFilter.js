@@ -18,22 +18,21 @@ const ShopTopFilter = (props) => {
     <div className="product-filter-wrapper" id="product-filter-wrapper">
       <div className="product-filter-wrapper__inner">
         <div className="row">
-          {/* Product Filter */}
           <div className="col-md-12 col-sm-6 col-xs-12 mb-30">
             <div className="product-filter">
               <h5>Phân loại</h5>
               {uniqueCategories ? (
                 <ul className="row">
-					<li className="col-2">
-                        <button
-                          onClick={e => {
-                            props.setParams({...props.params, category_id: null});
-                            setActiveSort(e);
-                          }}
-                        >
-                          Tất cả
-                        </button>
-                      </li>
+					        <li className="col-2">
+                    <button
+                      onClick={e => {
+                        props.setParams({...props.params, category_id: null});
+                        setActiveSort(e);
+                      }}
+                    >
+                      Tất cả
+                    </button>
+                  </li>
                   {uniqueCategories.map((category, key) => {
                     return (
                       <li key={key} className="col-2">
@@ -54,9 +53,8 @@ const ShopTopFilter = (props) => {
               )}
             </div>
           </div>
-
-          {/* Product Filter */}
-          {/* <div className="col-md-3 col-sm-6 col-xs-12 mb-30">
+          {/*
+          <div className="col-md-3 col-sm-6 col-xs-12 mb-30">
             <div className="product-filter">
               <h5>Color</h5>
               {uniqueColors ? (
@@ -80,9 +78,10 @@ const ShopTopFilter = (props) => {
                 "No colors found"
               )}
             </div>
-          </div> */}
-          {/* Product Filter */}
-          {/* <div className="col-md-3 col-sm-6 col-xs-12 mb-30">
+          </div> 
+          */}
+          {/* 
+          <div className="col-md-3 col-sm-6 col-xs-12 mb-30">
             <div className="product-filter">
               <h5>Size</h5>
               {uniqueSizes ? (
@@ -107,8 +106,8 @@ const ShopTopFilter = (props) => {
                 "No sizes found"
               )}
             </div>
-          </div> */}
-          {/* Product Filter */}
+          </div> 
+          */}
           {/* <div className="col-md-3 col-sm-6 col-xs-12 mb-30">
             <div className="product-filter product-filter--tag">
               <h5>Tag</h5>

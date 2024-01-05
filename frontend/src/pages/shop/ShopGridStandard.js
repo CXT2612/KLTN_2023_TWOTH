@@ -119,7 +119,7 @@ const ShopGridStandard = ( { location, dispatch } ) =>
 							<div className="col-12 order-1 order-lg-2">
 
 								<p>
-									Showing { products.length } of { paging.total } result
+									Hiển thị { products.length } trên { paging.total } kết quả
 								</p>
 								{/* shop topbar default */ }
 								{/* <ShopTopbar

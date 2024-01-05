@@ -21,8 +21,8 @@ import Breadcrumbs from "../../components/Breadbrumbs/Breadcrumbs.js";
 const Dashboard = () =>
 {
 	const [ checkboxes, setCheckboxes ] = useState( [ true, false ] );
-	const [ optionMonth, setOptionMonth ] = useState( [] );
 	const [ month, setMonth ] = useState( moment().month() );
+	const [ optionMonth, setOptionMonth ] = useState( [] );
 	const [ dataRevenue, setDataRevenue ] = useState( [] );
 	const [ dataDate, setDataDate ] = useState( [] );
 	const [ isCheck, setIsCheck ] = useState( false );
@@ -35,19 +35,18 @@ const Dashboard = () =>
 
 	const [ data, setData ] = useState( null );
 
-
 	const [ params, setParams ] = useState( {} )
 	const dispatch = useDispatch();
 
 	useEffect( () =>
 	{
 		getDashboard( {} );
-		getTime()
+		getSelectTime()
 	}, [] );
 
-	const getTime = () =>
+	const getSelectTime = () =>
 	{
-		let arrayTime = [ ...Array( 12 ) ].reduce( ( newItem, item, index ) =>
+		let arrayMonth = [ ...Array( 12 ) ].reduce( ( newItem, item, index ) =>
 		{
 			let obj = {
 				value: index + 1,
@@ -56,7 +55,7 @@ const Dashboard = () =>
 			newItem.push( obj );
 			return newItem
 		}, [] );
-		setOptionMonth( arrayTime )
+		setOptionMonth( arrayMonth )
 	}
 
 	const getDashboard = async ( filter ) =>
@@ -71,17 +70,15 @@ const Dashboard = () =>
 			setDataDate( date );
 		}
 		setIsCheck( true );
-
-
 	}
 	const routes = [
 		{
-			name: 'Dashboard',
+			name: '',
 			route: '/'
 		},
 	]
 	return ( <>
-		<Breadcrumbs routes={ routes } title={ "Dashboard" } />
+		<Breadcrumbs routes={ routes } title={ "Thống kê" } />
 		<Row>
 			<Col className="pr-grid-col" xs={ 12 } lg={ 12 }>
 				<Row className="gutter mb-4">
@@ -117,23 +114,22 @@ const Dashboard = () =>
 					</Col>
 				</Row>
 				<div className="gutter">
-
 					<Widget className="widget-p-lg">
 						<div className="align-items-center row mb-3 p-2">
 							<div className="headline-3 mb-3 col-2 font-weight-bold">Chọn tháng:</div>
-							<Select
+							<Select					
 								placeholder="Chọn tháng"
 								className="mb-4 col-3 w-100"
 								size="large"
 								defaultValue={ month + 1 }
-								onChange={ ( e ) =>
+								onChange={ ( e ) => 
 								{
 									getDashboard( { month: e } );
-									setMonth( e );
+									setMonth(e);						
 								} }
 								options={ optionMonth }
-							/>
-						</div>
+							/>							
+						</div>					
 						<Row className="gutter mb-4">
 							<Col className="mb-4 mb-md-0" xs={ 12 } md={ 6 }>
 								<h2 className="headline-2">Trạng thái đơn hàng</h2>

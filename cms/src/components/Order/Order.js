@@ -38,7 +38,6 @@ export const Orders = ( props ) =>
 
 	const genPaymentStatus = ( status ) =>
 	{
-
 		if ( status === 1 ) return <div className="badge bg-success">Đã thanh toán</div>;
 		return <div className="badge bg-primary">Chưa thanh toán</div>;
 	}
@@ -118,7 +117,7 @@ export const Orders = ( props ) =>
 															<SmallDashOutlined />
 														</DropdownToggle>
 														<DropdownMenu className="p-0">
-															<DropdownItem href={ `view/${ item.id }` } className="text-nowrap pt-2">
+															<DropdownItem href={ `show/${ item.id }` } className="text-nowrap pt-2">
 																Chi tiết
 															</DropdownItem>
 															<DropdownItem href={ `edit/${ item.id }` } className="text-nowrap pt-2">

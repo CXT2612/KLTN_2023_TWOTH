@@ -214,7 +214,7 @@ export const RoleForm = ( props ) =>
 							</button>
 
 							{ !id && <button type="button" className="btn btn-secondary text-center" style={ { marginLeft: 10, padding: '10px 10px' } } onClick={ resetForm }>
-								Reset
+								Làm mới
 							</button> }
 						</div>
 					</Form>

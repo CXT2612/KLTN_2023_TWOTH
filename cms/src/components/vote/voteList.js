@@ -72,7 +72,7 @@ export const PageVoting = () =>
 	const routes = [
 		{
 			name: 'Đánh giá',
-			route: '/reviews'
+			route: '/vote'
 		},
 		{
 			name: 'Danh sách',
@@ -101,13 +101,14 @@ export const PageVoting = () =>
 							return (
 								<tr key={ key }>
 									<td className='align-middle'>{ key + 1 }</td>
-									<td className='text-nowrap align-middle'>
+									<td className='align-middle'>{ item?.user?.name || 'N/A' }</td>
+									{/* <td className='text-nowrap align-middle'>
 										{ item?.user?.name || 'N/A' }
 										<Link className={ '' }
 													to={ `/vote/edit/${ item.id }` } >
 													
 										</Link>
-									</td>
+									</td> */}
 									<td className='align-middle' style={{maxWidth: '100px'}}>{ item?.product?.name || 'N/A' }</td>
 									<td className='align-middle text-nowrap'>
 										<StarIcons vote_number={ item?.number } />

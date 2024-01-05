@@ -2,7 +2,7 @@ export const SIDE_BARS = [
 	{
 		path: '/dashboard',
 		icon: 'eva eva-home-outline',
-		title: 'Dashboard',
+		title: 'Thống kê',
 		key: -1 
 	},
 	{
@@ -153,7 +153,7 @@ export const SIDE_BARS = [
 	},
 
 	{
-		path: '/reviews',
+		path: '/vote',
 		icon: 'eva eva-star',
 		title: 'Đánh giá',
 		key: -2

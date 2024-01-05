@@ -82,10 +82,10 @@ export class OrderService {
 				}
 			});
 			if (_.isEmpty(product)) {
-				throw new BadRequestException({ code: 'OR0001', message: `Không tìm thấy sản phẩm #id ${item.id}` });
+				throw new BadRequestException({ code: 'OR0001', message: `Không tìm thấy sản phẩm ${item.name}` });
 			}
 			if (Number(item.quantity) > Number(product.number)) {
-				throw new BadRequestException({ code: 'OR0001', message: `Số lượng sản phẩm #id ${item.id} quá lớn ` });
+				throw new BadRequestException({ code: 'OR0001', message: `Số lượng sản phẩm ${item.name} quá lớn ` });
 			}
 			item.avatar = product.avatar;
 			item.price = product.price;

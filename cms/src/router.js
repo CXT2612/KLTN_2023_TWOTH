@@ -42,13 +42,13 @@ export const ROUTERS = [
 		path: '/product/create',
 		exact: true,
 		title: 'Add new product',
-		redirectFrom: null, 
+		redirectFrom: '/product', 
 		component: ProductForm,
 	},
 	{
 		path: '/product/edit/:id',
 		exact: true,
-		redirectFrom: null, 
+		redirectFrom: '/product', 
 		title: 'Edit product',
 		component: ProductForm,
 	},
@@ -176,7 +176,7 @@ export const ROUTERS = [
 	},
 
 	{
-		path: '/reviews',
+		path: '/vote',
 		exact: true,
 		title: 'Reviews',
 		component: PageVoting,

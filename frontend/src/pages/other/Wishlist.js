@@ -94,7 +94,7 @@ const Wishlist = ( {
 									products?.length > 0 ?
 										<>
 											<p>
-												Showing { products.length } of { paging.total } result
+												Hiển thị { products.length } trên { paging.total } kết quả
 											</p>
 											<ShopProducts layout={ layout } 
 											products={ products } 
