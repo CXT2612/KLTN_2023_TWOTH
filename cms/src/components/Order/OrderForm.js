@@ -23,8 +23,7 @@ export const OrderForm = ( props ) =>
 	const params = useParams();
 	const [ id, setId ] = useState( null );
 	const [ status, setStatus ] = useState();
-	const [ shippingStatus1, setShippingStatus1 ] = useState();
-	const [ shippingStatus2, setShippingStatus2 ] = useState();
+	const [ shippingStatus, setShippingStatus ] = useState();
 	const [ totalDiscount, setTotalDiscount ] = useState( 0 );
 	const [ totalPrice, setTotalPrice ] = useState( 0 );
 
@@ -39,16 +38,11 @@ export const OrderForm = ( props ) =>
 			{ value: 3, label: 'Hoàn thành' },
 			{ value: 4, label: 'Hủy bỏ' },
 		] );
-		if ( orderInfo.status == 1 )
-			setShippingStatus1( [
-				{ value: 1, label: 'Chờ giao hàng' },
-			] );
-		else
-			setShippingStatus2( [
-				{ value: 1, label: 'Chờ giao hàng' },
-				{ value: 2, label: 'Đang giao' },
-				{ value: 3, label: 'Đã giao' },
-			] );
+		setShippingStatus( [
+			{ value: 1, label: 'Chờ giao hàng' },
+			{ value: 2, label: 'Đang giao' },
+			{ value: 3, label: 'Đã giao' },
+		] );
 	}, [] );
 
 	useEffect( () =>
@@ -207,7 +201,7 @@ export const OrderForm = ( props ) =>
     										placeholder="Chọn trạng thái giao hàng"
     										disabled={isView}
     										style={{ width: '100%' }}
-    										options={Form.useForm.item.label === 'Chờ duyệt' ? shippingStatus1 : shippingStatus2}
+    										options={ shippingStatus }
   										/>
 									</Form.Item>
 								</div>
