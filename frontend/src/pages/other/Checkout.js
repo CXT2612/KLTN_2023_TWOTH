@@ -51,7 +51,7 @@ const Checkout = ( { location, cartItems, currency } ) =>
 			</MetaTags>
 			<BreadcrumbsItem to={ process.env.PUBLIC_URL + "/" }>Trang chủ</BreadcrumbsItem>
 			<BreadcrumbsItem to={ process.env.PUBLIC_URL + pathname }>
-				Checkout
+				Kiểm tra đơn hàng
 			</BreadcrumbsItem>
 			<LayoutOne headerTop="visible">
 				{/* breadcrumb */ }
@@ -187,7 +187,7 @@ const Checkout = ( { location, cartItems, currency } ) =>
 								<div className="col-lg-12">
 									<div className="item-empty-area text-center">
 										<div className="item-empty-area__icon mb-30">
-											<img src={ SUCCESS_PAYMENT } width={ 80 } height={ 80 } alt='payment' className="d-block mx-auto" />
+											{/* <img src={ SUCCESS_PAYMENT } width={ 80 } height={ 80 } alt='payment' className="d-block mx-auto" /> */}
 										</div>
 										<div className="item-empty-area__text">
 											Đơn hàng đặt thành công <br />{ " " }

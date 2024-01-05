@@ -99,7 +99,6 @@ export class CategoryController {
 
     @Delete('delete/:id')
     @HttpCode(HttpStatus.OK)
-	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async deleteCategory(@Param('id') cateId: number) {
         try {
