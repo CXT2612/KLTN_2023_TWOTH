@@ -69,7 +69,7 @@ export class VoteController {
         }
     }
 
-    // @Put('update/:id')
+    // @Put('edit/:id')
     // @HttpCode(HttpStatus.OK)
     // @ApiResponse({ status: 200, description: 'success' })
     // async updateVote(@Request() req: any, @Param('id') id: number, @Body() data: UpdateVoteDto) {

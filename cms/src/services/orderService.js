@@ -60,5 +60,5 @@ export const getOrderById = async (id, setOrderInfo, dispatch) => {
 
 export const updateOrder = async (id, data) => {
 	await timeDelay(1000)
-	return await putMethod('/admin/order/update/'+id, data);
+	return await putMethod('/admin/order/edit/'+id, data);
 }

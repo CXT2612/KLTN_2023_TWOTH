@@ -72,7 +72,7 @@ export class CategoryController {
     //     }
     // }
 
-    // @Put('update/:id')
+    // @Put('edit/:id')
     // @HttpCode(HttpStatus.OK)
     // @ApiResponse({ status: 200, description: 'success' })
     // async updateCategory(@Param('id') cateId: number, @Body() updateCate: UpdateCategoryDto) {

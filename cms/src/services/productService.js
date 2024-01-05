@@ -24,12 +24,12 @@ export const Product = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/product/update/${ id }`, data );
+		return await putMethod( `/admin/product/edit/${ id }`, data );
 	},
 
 	async updateStatus ( id, data )
 	{
-		return await putMethod( `/admin/product/update/status/${ id }`, data );
+		return await putMethod( `/admin/product/edit/status/${ id }`, data );
 	},
 
 	async delete ( id )

@@ -23,7 +23,7 @@ export const DiscountService = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/discount/update/${ id }`, data );
+		return await putMethod( `/admin/discount/edit/${ id }`, data );
 	},
 
 	async delete ( id )

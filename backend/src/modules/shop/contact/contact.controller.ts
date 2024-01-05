@@ -63,7 +63,7 @@ export class ContactController {
 		}
 	}
 
-	@Put('update/:id')
+	@Put('edit/:id')
 	@UseGuards(RoleGuard)
 	async update(@Param('id') id: string, @Body() updateOrderDto: CreateContactDto) {
 		try {

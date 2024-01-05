@@ -49,97 +49,97 @@ export class PermissionService {
                 name : 'Dashboard',
                 description: 'Dashboard',
                 group: 'Dashboard',
-                guard_name: '/statistical'
+                guard_name: '/statistical/'
             },
             {
                 name : 'Danh sách Đơn hàng',
                 description: 'Danh sách Đơn hàng',
                 group: 'ORDER',
-                guard_name: '/order'
+                guard_name: '/order/'
             },
             {
                 name : 'Chi tiết Đơn hàng',
                 description: 'Chi tiết đơn hàng',
 				group: 'ORDER',
-                guard_name: '/order/show'
+                guard_name: '/order/show/'
             },
             {
                 name : 'Cập nhật Đơn hàng',
                 description: 'Cập nhật đơn hàng',
 				group: 'ORDER',
-                guard_name: '/order/edit'
+                guard_name: '/order/edit/'
             },
             {
                 name : 'Danh sách Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Danh sách sản phẩm',
-                guard_name: '/product'
+                guard_name: '/product/'
             },
             {
                 name : 'Chi tiết Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Chi tiết sản phẩm',
-                guard_name: '/product/show'
+                guard_name: '/product/show/'
             },
             {
                 name : 'Add Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Thêm mới sản phẩm',
-                guard_name: '/product/store'
+                guard_name: '/product/store/'
             },
             {
                 name : 'Cập nhật Sản phẩm',
 				group: 'PRODUCT',
                 description: 'Cập nhật sản phẩm',
-                guard_name: '/product/edit'
+                guard_name: '/product/edit/'
             },
             {
                 name : 'Danh sách Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Danh sách phân loại',
-                guard_name: '/category'
+                guard_name: '/category/'
             },
             {
                 name : 'Chi tiết Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Chi tiết phân loại',
-                guard_name: '/category/show'
+                guard_name: '/category/show/'
             },
             {
                 name : 'Add Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Thêm mới Phân loại',
-                guard_name: '/category/store'
+                guard_name: '/category/store/'
             },
             {
                 name : 'Cập nhật Phân loại sản phẩm',
 				group: 'CATEGORY',
                 description: 'Cập nhật phân loại',
-                guard_name: '/category/edit'
+                guard_name: '/category/edit/'
             },
             {
                 name : 'Danh sách Slide',
 				group: 'SLIDE',
                 description: 'Danh sách slide',
-                guard_name: '/slide'
+                guard_name: '/slide/'
             },
             {
                 name : 'Chi tiết Slide',
 				group: 'SLIDE',
                 description: 'Chi tiết slide',
-                guard_name: '/slide/show'
+                guard_name: '/slide/show/'
             },
             {
                 name : 'Add Slide',
 				group: 'SLIDE',
                 description: 'Thêm mới slide',
-                guard_name: '/slide/store'
+                guard_name: '/slide/store/'
             },
             {
                 name : 'Cập nhật Slide',
 				group: 'SLIDE',
                 description: 'Cập nhật slide',
-                guard_name: '/slide/edit'
+                guard_name: '/slide/edit/'
             },
 			{
                 name : 'Danh sách Giảm giá',
@@ -151,43 +151,43 @@ export class PermissionService {
                 name : 'Chi tiết Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Chi tiết Giảm giá',
-                guard_name: '/discount/show'
+                guard_name: '/discount/show/'
             },
             {
                 name : 'Add Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Thêm mới Giảm giá',
-                guard_name: '/discount/store'
+                guard_name: '/discount/store/'
             },
             {
                 name : 'Cập nhật Giảm giá',
 				group: 'DISCOUNT',
                 description: 'Cập nhật Giảm giá',
-                guard_name: '/discount/edit'
+                guard_name: '/discount/edit/'
             },
             {
                 name : 'Danh sách Role',
 				group: 'ROLE',
                 description: 'Danh sách Role',
-                guard_name: '/role'
+                guard_name: '/role/'
             },
             {
                 name : 'Chi tiết Role',
 				group: 'ROLE',
                 description: 'Chi tiết Role',
-                guard_name: '/role/show'
+                guard_name: '/role/show/'
             },
             {
                 name : 'Add Role',
 				group: 'ROLE',
                 description: 'Thêm mới Role',
-                guard_name: '/role/store'
+                guard_name: '/role/store/'
             },
             {
                 name : 'Cập nhật Role',
 				group: 'ROLE',
                 description: 'Cập nhật Role',
-                guard_name: '/role/edit'
+                guard_name: '/role/edit/'
             },
             {
                 name : 'Danh sách permission',
@@ -199,115 +199,115 @@ export class PermissionService {
                 name : 'Thông tin liên hệ',
 				group: 'CONTACT',
                 description: 'Thông tin liên hệ',
-                guard_name: '/contact'
+                guard_name: '/contact/'
             },
             {
                 name : 'Danh sách user',
 				group: 'USER',
                 description: 'Danh sách user',
-                guard_name: '/user'
+                guard_name: '/user/'
             },
             {
                 name : 'Chi tiết user',
 				group: 'USER',
                 description: 'Chi tiết user',
-                guard_name: '/user/show'
+                guard_name: '/user/show/'
             },
             {
                 name : 'Add user',
 				group: 'USER',
                 description: 'Thêm mới user',
-                guard_name: '/user/store'
+                guard_name: '/user/store/'
             },
             {
                 name : 'Cập nhật user',
                 description: 'Cập nhật user',
 				group: 'USER',
-                guard_name: '/user/edit'
+                guard_name: '/user/edit/'
             },
 			{
                 name : 'Danh sách reviews',
 				group: 'VOTE',
                 description: 'Danh sách reviews',
-                guard_name: '/vote'
+                guard_name: '/vote/'
             },
 			{
                 name : 'Chi tiết reviews',
 				group: 'VOTE',
                 description: 'Chi tiết vote',
-                guard_name: '/vote/show'
+                guard_name: '/vote/show/'
             },
 			{
                 name : 'Cập nhật reviews',
 				group: 'VOTE',
                 description: 'Cập nhật reviews',
-                guard_name: '/vote/edit'
+                guard_name: '/vote/edit/'
             },
 			{
                 name : 'Xóa reviews',
 				group: 'VOTE',
                 description: 'Xóa reviews',
-                guard_name: '/vote/delete'
+                guard_name: '/vote/delete/'
             },
 			{
                 name : 'Danh sách Blog',
 				group: 'BLOG',
                 description: 'Danh sách blog',
-                guard_name: '/blog'
+                guard_name: '/blog/'
             },
 			{
                 name : 'Chi tiết blog',
 				group: 'BLOG',
                 description: 'Chi tiết blog',
-                guard_name: '/blog/show'
+                guard_name: '/blog/show/'
             },
 			{
                 name : 'Tạo blog',
 				group: 'BLOG',
                 description: 'Tạo blog',
-                guard_name: '/blog/store'
+                guard_name: '/blog/store/'
             },
 			{
                 name : 'Cập nhật blog',
 				group: 'BLOG',
                 description: 'Cập nhật blog',
-                guard_name: '/blog/edit'
+                guard_name: '/blog/edit/'
             },
 			{
                 name : 'Xóa blog',
 				group: 'BLOG',
                 description: 'Xóa blog',
-                guard_name: '/blog/delete'
+                guard_name: '/blog/delete/'
             },
 			{
                 name : 'Danh sách phân loại blog',
 				group: 'MENU',
                 description: 'Danh sách phân loại blog',
-                guard_name: '/menu'
+                guard_name: '/menu/'
             },
 			{
                 name : 'Chi tiết phân loại blog',
 				group: 'MENU',
                 description: 'Chi tiết phân loại blog',
-                guard_name: '/menu/show'
+                guard_name: '/menu/show/'
             },
 			{
                 name : 'Tạo phân loại blog',
 				group: 'MENU',
                 description: 'Tạo phân loại blog',
-                guard_name: '/menu/store'
+                guard_name: '/menu/store/'
             },
 			{
                 name : 'Cập nhật phân loại blog',
 				group: 'MENU',
                 description: 'Cập nhật phân loại blog',
-                guard_name: '/menu/edit'
+                guard_name: '/menu/edit/'
             },
 			{
                 name : 'Xóa phân loại blog',
 				group: 'MENU',
                 description: 'Xóa phân loại blog',
-                guard_name: '/menu/delete'
+                guard_name: '/menu/delete/'
             },
 			
         ]

@@ -29,7 +29,7 @@ export const SlideService = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/slide/update/${ id }`, data );
+		return await putMethod( `/admin/slide/edit/${ id }`, data );
 	},
 
 	async delete ( id )

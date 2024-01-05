@@ -104,7 +104,7 @@ export const PageVoting = () =>
 									<td className='text-nowrap align-middle'>
 										{ item?.user?.name || 'N/A' }
 										<Link className={ '' }
-													to={ `/vote/update/${ item.id }` } >
+													to={ `/vote/edit/${ item.id }` } >
 													
 										</Link>
 									</td>

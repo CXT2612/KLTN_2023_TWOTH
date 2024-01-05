@@ -52,7 +52,7 @@ export const ROLE_SERVICE = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/role/update/${ id }`, data );
+		return await putMethod( `/admin/role/edit/${ id }`, data );
 	},
 
 	async delete ( id )

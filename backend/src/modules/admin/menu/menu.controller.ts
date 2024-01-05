@@ -75,7 +75,7 @@ export class MenuController {
         }
     }
 
-    @Put('update/:id')
+    @Put('edit/:id')
     @HttpCode(HttpStatus.OK)
     @UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })

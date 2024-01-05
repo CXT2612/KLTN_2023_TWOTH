@@ -85,7 +85,7 @@ export class UserController {
         }
     }
 
-    @Put('update/:id')
+    @Put('edit/:id')
 	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
     async update(

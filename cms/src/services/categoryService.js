@@ -23,7 +23,7 @@ export const Category = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/category/update/${ id }`, data );
+		return await putMethod( `/admin/category/edit/${ id }`, data );
 	},
 
 	async delete ( id )

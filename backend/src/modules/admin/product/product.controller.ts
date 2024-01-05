@@ -36,7 +36,7 @@ export class ProductController {
 			return BaseResponse(error.status, error.response, error.code || 'E0001', error.message);
 		}
 	}
-	@Put('/update/status/:id')
+	@Put('/edit/status/:id')
 	@HttpCode(HttpStatus.OK)
 	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })
@@ -55,7 +55,7 @@ export class ProductController {
 		}
 	}
 
-	@Put('/update/:id')
+	@Put('/edit/:id')
 	@HttpCode(HttpStatus.OK)
 	@UseGuards(RoleGuard)
     @ApiResponse({ status: 200, description: 'success' })

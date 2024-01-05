@@ -19,6 +19,6 @@ export const ORDER_SERVICE = {
 	},
 
 	update: async (id, data) => {
-		return await putMethod('order/update/' + id, data);
+		return await putMethod('order/edit/' + id, data);
 	}
 }

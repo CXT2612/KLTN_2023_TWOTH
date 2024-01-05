@@ -53,7 +53,7 @@ export const USER_SERVICE = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/user/update/${ id }`, data );
+		return await putMethod( `/admin/user/edit/${ id }`, data );
 	},
 
 	async delete ( id )

@@ -69,7 +69,7 @@ export class ArticleController {
     //     }
     // }
 
-    // @Put('update/:id')
+    // @Put('edit/:id')
     // @HttpCode(HttpStatus.OK)
     // @ApiResponse({ status: 200, description: 'success' })
     // async updateArticle(@Param('id') id: number, @Body() updateArticle: UpdateArticleDto) {

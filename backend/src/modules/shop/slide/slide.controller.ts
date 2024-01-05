@@ -71,7 +71,7 @@ export class SlideController {
     //     }
     // }
 
-    // @Put('update/:id')
+    // @Put('edit/:id')
     // @HttpCode(HttpStatus.OK)
     // @ApiResponse({ status: 200, description: 'success' })
     // async updateSlide(@Param('id') id: number, @Body() updateSlide: UpdateSlidesDto) {

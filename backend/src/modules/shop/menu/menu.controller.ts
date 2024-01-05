@@ -69,7 +69,7 @@ export class MenuController {
     //     }
     // }
 
-    // @Put('update/:id')
+    // @Put('edit/:id')
     // @HttpCode(HttpStatus.OK)
     // @ApiResponse({ status: 200, description: 'success' })
     // async updateMenu(@Param('id') id: number, @Body() updateMenu: UpdateMenuDto) {

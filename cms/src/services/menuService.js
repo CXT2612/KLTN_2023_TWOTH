@@ -22,7 +22,7 @@ export const MenuService = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/menu/update/${ id }`, data );
+		return await putMethod( `/admin/menu/edit/${ id }`, data );
 	},
 
 	async delete ( id )

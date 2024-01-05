@@ -45,21 +45,21 @@ export class MiddlewareMiddleware implements NestMiddleware {
 				}
 				let userRoles = user.roles;
 				let userPermission;
-				let pathName = req.path + "";
+				let pathName = req.path.replace(/\d+$/, "");
 				if (userRoles != null) {
 					for (let i = 0; i < user.roles.length; i++) {
 						for (let j = 0, userRole = userRoles.at(i); j < userRole.permissions.length; j++) {
-							userPermission = userRole.permissions.at(j).guard_name;
+							userPermission = userRole.permissions.at(j).guard_name;							
 							//console.log("1 " + userPermission);
 							if (userPermission.includes(pathName) || userPermission == "SUPER-ADMINISTRATOR") {
+								//console.log("2 " + pathName);
 								next();
 								return;
 							}
 						}
-					  }
-					//console.log("2 " + pathName);
-				}
-				next();
+					}
+					console.log("2 " + pathName);
+				}				
 				return;
 			}
 		} catch (error) {

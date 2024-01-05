@@ -1,7 +1,7 @@
 import { Body, Controller, Get, HttpStatus, Param, Post, Put, Req, UseGuards } from "@nestjs/common";
 import { ApiResponse, ApiTags } from "@nestjs/swagger";
 import { PermissionService } from "../services/permission.service";
-import { BaseResponse, GROUP_TYPE } from "src/helpers/helper";
+import { BaseResponse} from "src/helpers/helper";
 import { PermissionDto } from "../dtos/permission.dto";
 import { JwtGuard } from "src/modules/auth/guards/jwt/jwt.guard";
 import { RoleGuard } from "src/modules/auth/guards/role/role.guard";
@@ -83,7 +83,7 @@ export class PermissionController {
 		}
 	}
 
-	@Put('update/:id')
+	@Put('edit/:id')
 	@UseGuards(RoleGuard)
 	@ApiResponse({ status: 200, description: 'success' })
 	async update(
@@ -115,14 +115,14 @@ export class PermissionController {
 		}
 	}
 
-	@Get('config-type')
-	@UseGuards(RoleGuard)
-	@ApiResponse({ status: 200, description: 'success' })
-	async groupType() {
-		try {
-			return BaseResponse('success', GROUP_TYPE,'',  'success');
-		} catch (e) {
-			console.log('-------------- acl/permission@:groupType ', e);
-		}
-	}
+	// @Get('config-type')
+	// @UseGuards(RoleGuard)
+	// @ApiResponse({ status: 200, description: 'success' })
+	// async groupType() {
+	// 	try {
+	// 		return BaseResponse('success', GROUP_TYPE,'',  'success');
+	// 	} catch (e) {
+	// 		console.log('-------------- acl/permission@:groupType ', e);
+	// 	}
+	// }
 }

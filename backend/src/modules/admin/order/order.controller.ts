@@ -70,7 +70,7 @@ export class OrderController {
 		}
 	}
 
-	@Put('update/:id')
+	@Put('edit/:id')
 	@UseGuards(RoleGuard)
 	async update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
 		try {

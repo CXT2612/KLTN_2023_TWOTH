@@ -22,7 +22,7 @@ export const BlogService = {
 
 	async update ( id, data )
 	{
-		return await putMethod( `/admin/blog/update/${ id }`, data );
+		return await putMethod( `/admin/blog/edit/${ id }`, data );
 	},
 
 	async delete ( id )
