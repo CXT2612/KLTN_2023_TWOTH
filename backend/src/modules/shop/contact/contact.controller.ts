@@ -15,7 +15,7 @@ export class ContactController {
 	constructor(private readonly contactService: ContactService) { }
 
 	@Post('store')
-	@UseGuards(RoleGuard)
+	// @UseGuards(RoleGuard)
 	async create(@Request() req: any, @Body() createOrderDto: CreateContactDto) {
 		try {
 			if(_.isEmpty(createOrderDto)) {
@@ -32,7 +32,7 @@ export class ContactController {
 	}
 
 	@Get('')
-	@UseGuards(RoleGuard)
+	// @UseGuards(RoleGuard)
 	async findAll(@Request() req: any) {
 		try {
 			let paging: IPaging = {
@@ -52,7 +52,6 @@ export class ContactController {
 	}
 
 	@Get('show/:id')
-	@UseGuards(RoleGuard)
 	async findOne(@Param('id') id: string) {
 		try {
 			
@@ -63,24 +62,24 @@ export class ContactController {
 		}
 	}
 
-	@Put('edit/:id')
-	@UseGuards(RoleGuard)
-	async update(@Param('id') id: string, @Body() updateOrderDto: CreateContactDto) {
-		try {
-			let order = await this.contactService.findOne(Number(id));
-			if(_.isEmpty(order)) {
-				throw new BadRequestException({code: 'OR0002', message:'Not found order by Id'});
-			}
-			return BaseResponse(HTTP_STATUS.success, await this.contactService.update(Number(id), updateOrderDto),'', 'successfully');
-		} catch (error) {
-			console.log('e@findOne Order----> ', error);
-			return BaseResponse(error.status, error.response, error.code || 'E0001', error.message);
-		}
-	}
+	// @Put('edit/:id')
+	// @UseGuards(RoleGuard)
+	// async update(@Param('id') id: string, @Body() updateOrderDto: CreateContactDto) {
+	// 	try {
+	// 		let order = await this.contactService.findOne(Number(id));
+	// 		if(_.isEmpty(order)) {
+	// 			throw new BadRequestException({code: 'OR0002', message:'Not found order by Id'});
+	// 		}
+	// 		return BaseResponse(HTTP_STATUS.success, await this.contactService.update(Number(id), updateOrderDto),'', 'successfully');
+	// 	} catch (error) {
+	// 		console.log('e@findOne Order----> ', error);
+	// 		return BaseResponse(error.status, error.response, error.code || 'E0001', error.message);
+	// 	}
+	// }
 	
-	@Delete('delete/:id')
-	@UseGuards(RoleGuard)
-	remove(@Param('id') id: string) {
-		return this.contactService.remove(+id);
-	}
+	// @Delete('delete/:id')
+	// @UseGuards(RoleGuard)
+	// remove(@Param('id') id: string) {
+	// 	return this.contactService.remove(+id);
+	// }
 }

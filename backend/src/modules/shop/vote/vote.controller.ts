@@ -52,7 +52,6 @@ export class VoteController {
 
     @Post('store')
     @HttpCode(HttpStatus.OK)
-	@UseGuards(JwtGuard)
     @ApiResponse({ status: 200, description: 'success' })
     async createVote(@Request() req: any, @Body() data: CreateVoteDto) {
         try {
